@@ -6,7 +6,13 @@
     <color name="card_bg">#33FFFFFF</color>
     <color name="card_bg_dark">#1AFFFFFF</color>
     
-    <!-- Primary Colors -->
+    <!-- Primary Colors (Required for Material Theme) -->
+    <color name="colorPrimary">#6366F1</color>
+    <color name="colorPrimaryDark">#4F46E5</color>
+    <color name="colorAccent">#10B981</color>
+    <color name="colorControlHighlight">#C4B5FD</color>
+    
+    <!-- Purple Colors -->
     <color name="purple_primary">#6366F1</color>
     <color name="purple_light">#8B5CF6</color>
     <color name="purple_dark">#4F46E5</color>
