@@ -10,7 +10,6 @@
     </style>
 
     <style name="Theme.AccessLogin.Splash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/dark_bg</item>
         <item name="postSplashScreenTheme">@style/Theme.AccessLogin</item>
     </style>
 </resources>
