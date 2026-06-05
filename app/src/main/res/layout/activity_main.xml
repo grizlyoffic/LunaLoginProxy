@@ -1,0 +1,430 @@
+?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_gradient"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- Logout Button - Premium Style -->
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="LOGOUT"
+            android:textSize="10sp"
+            android:textColor="#FFCDD2"
+            android:letterSpacing="0.12"
+            android:fontFamily="sans-serif-medium"
+            android:backgroundTint="#55B71C1C"
+            android:stateListAnimator="@null"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/btn_logout"
+            android:layout_marginTop="16dp">
+
+            <!-- Main Header Card with Glow Effect -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="32dp"
+                app:cardBackgroundColor="#CC0A0F1E"
+                app:cardElevation="30dp"
+                app:cardPreventCornerOverlap="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="44dp"
+                    android:paddingBottom="36dp"
+                    android:paddingStart="28dp"
+                    android:paddingEnd="28dp">
+
+                    <!-- Premium Icon Placeholder -->
+                    <View
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/ic_launcher_foreground"
+                        android:alpha="0.9" />
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚡ ACCESS LOGIN"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="#FFFFFFFF"
+                        android:letterSpacing="0.25"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Premium Automation Suite"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#88FFFFFF"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="20dp" />
+
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="3dp"
+                        android:background="@drawable/gradient_divider"
+                        android:layout_marginBottom="20dp" />
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Initializing secure environment..."
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#B0C4DE"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="1.5" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Shizuku Guide Card - Premium Glassmorphism -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="28dp"
+                app:cardBackgroundColor="#33FFFFFF"
+                app:cardElevation="15dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_shizuku_guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/rounded_dot"
+                            android:layout_marginEnd="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SHIZUKU INTEGRATION"
+                            android:textSize="10sp"
+                            android:textColor="#A5F3FC"
+                            android:letterSpacing="0.25"
+                            android:fontFamily="sans-serif-medium" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Enable privileged access for automation features"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#E0E7FF"
+                        android:layout_marginBottom="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="20dp"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="▸ Download &amp; Install Shizuku Manager"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#CCFFFFFF"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="▸ Enable Wireless Debugging in Developer Options"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#CCFFFFFF"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="▸ Pair &amp; Start Shizuku Service"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#CCFFFFFF" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_download_shizuku"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="DOWNLOAD SHIZUKU"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF"
+                        android:letterSpacing="0.12"
+                        android:fontFamily="sans-serif-medium"
+                        android:backgroundTint="#446366F1"
+                        android:stateListAnimator="@null"
+                        android:transitionName="download_btn" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Authentication Card - Premium Design -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="28dp"
+                app:cardBackgroundColor="#33FFFFFF"
+                app:cardElevation="15dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_auth_gateway"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="20dp">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/rounded_dot_purple"
+                            android:layout_marginEnd="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SECURE AUTHENTICATION"
+                            android:textSize="10sp"
+                            android:textColor="#C4B5FD"
+                            android:letterSpacing="0.25"
+                            android:fontFamily="sans-serif-medium" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Enter your authentication key to access premium features"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#B0C4DE"
+                        android:layout_marginBottom="20dp" />
+
+                    <EditText
+                        android:id="@+id/et_token"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:hint="Authentication Key"
+                        android:textColorHint="#66FFFFFF"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:paddingStart="22dp"
+                        android:paddingEnd="22dp"
+                        android:background="@drawable/edittext_rounded_border"
+                        android:layout_marginBottom="20dp" />
+
+                    <Button
+                        android:id="@+id/btn_sync"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="VALIDATE &amp; CONTINUE"
+                        android:textSize="13sp"
+                        android:textColor="#FFFFFF"
+                        android:letterSpacing="0.12"
+                        android:fontFamily="sans-serif-medium"
+                        android:backgroundTint="@drawable/btn_gradient_purple"
+                        android:stateListAnimator="@null" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Automation Engine Card - Main Control Panel -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="28dp"
+                app:cardBackgroundColor="#33FFFFFF"
+                app:cardElevation="15dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_automation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/rounded_dot_green"
+                            android:layout_marginEnd="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AUTOMATION ENGINE"
+                            android:textSize="10sp"
+                            android:textColor="#6EE7B7"
+                            android:letterSpacing="0.25"
+                            android:fontFamily="sans-serif-medium" />
+
+                    </LinearLayout>
+
+                    <!-- Premium Timer Display -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardBackgroundColor="#1A10B981">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="24dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SESSION TIMER"
+                                android:textSize="9sp"
+                                android:textColor="#34D399"
+                                android:letterSpacing="0.2"
+                                android:layout_marginBottom="12dp" />
+
+                            <TextView
+                                android:id="@+id/tv_timer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00:00:00"
+                                android:textSize="36sp"
+                                android:fontFamily="sans-serif-light"
+                                android:textStyle="bold"
+                                android:textColor="#34D399"
+                                android:letterSpacing="0.05"
+                                android:textAlignment="center"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Control Buttons -->
+                    <Button
+                        android:id="@+id/btn_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="🚀 START SERVICE"
+                        android:textSize="13sp"
+                        android:textColor="#FFFFFF"
+                        android:letterSpacing="0.1"
+                        android:fontFamily="sans-serif-medium"
+                        android:backgroundTint="@drawable/btn_gradient_green"
+                        android:stateListAnimator="@null"
+                        android:layout_marginBottom="12dp" />
+
+                    <Button
+                        android:id="@+id/btn_stop"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="⏹️ STOP SERVICE"
+                        android:textSize="13sp"
+                        android:textColor="#FFFFFF"
+                        android:letterSpacing="0.1"
+                        android:fontFamily="sans-serif-medium"
+                        android:backgroundTint="@drawable/btn_gradient_red"
+                        android:stateListAnimator="@null"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Premium Loading Indicator -->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:visibility="gone"
+                android:indeterminateTint="#818CF8" />
+
+            <!-- Footer Text -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="© 2024 Access Login • Premium Suite"
+                android:textSize="9sp"
+                android:textColor="#44FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
