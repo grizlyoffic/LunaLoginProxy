@@ -8,14 +8,18 @@
         <item name="android:windowLightNavigationBar">false</item>
         
         <item name="colorPrimary">@color/purple_primary</item>
-        <item name="colorPrimaryDark">@color/purple_dark</item>
-        <item name="colorAccent">@color/green_primary</item>
+        <item name="colorPrimaryVariant">@color/purple_dark</item>
+        <item name="colorSecondary">@color/green_primary</item>
+        <item name="colorSecondaryVariant">@color/green_dark</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorControlHighlight">@color/purple_accent</item>
         
-        <item name="android:windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+        <item name="android:fontFamily">sans-serif-light</item>
     </style>
-
+    
     <style name="Theme.AccessLogin.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/dark_bg</item>
+        <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>
         <item name="postSplashScreenTheme">@style/Theme.AccessLogin</item>
     </style>
 </resources>
