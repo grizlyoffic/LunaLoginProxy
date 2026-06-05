@@ -4,19 +4,13 @@
         <item name="android:windowBackground">@color/dark_bg</item>
         <item name="android:statusBarColor">@color/dark_bg</item>
         <item name="android:navigationBarColor">@color/dark_bg</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:windowLightNavigationBar">false</item>
-        
-        <!-- Material Design Colors -->
         <item name="colorPrimary">@color/purple_primary</item>
         <item name="colorPrimaryDark">@color/purple_dark</item>
         <item name="colorAccent">@color/green_primary</item>
-        <item name="colorControlHighlight">@color/purple_accent</item>
-        
-        <!-- Font -->
-        <item name="android:fontFamily">sans-serif-light</item>
-        
-        <!-- Android 12+ Window Insets -->
-        <item name="android:windowInsetsController">true</item>
+    </style>
+
+    <style name="Theme.AccessLogin.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/dark_bg</item>
+        <item name="postSplashScreenTheme">@style/Theme.AccessLogin</item>
     </style>
 </resources>
