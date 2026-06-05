@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "825024469978",
+    "project_id": "access-login-413f8",
+    "storage_bucket": "access-login-413f8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825024469978:android:05348e0558ccb05bbe3ee3",
+        "android_client_info": {
+          "package_name": "online.akiru.accesslogin.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZuLACWusHvu5h7AOOzui7xzbNDozqsvI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

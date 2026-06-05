@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Access Login</string>
+    
+    <!-- Titles -->
+    <string name="app_title">⚡ ACCESS LOGIN</string>
+    <string name="app_subtitle">Premium Automation Suite</string>
+    <string name="footer_text">© 2024 Access Login • Premium Suite</string>
+    
+    <!-- Status Messages -->
+    <string name="status_initializing">Initializing secure environment...</string>
+    <string name="status_evaluating">Evaluating local device privileges...</string>
+    <string name="status_welcome">Welcome back! Engine Active.</string>
+    <string name="status_stopped">Service Stopped</string>
+    <string name="status_active">Service Active - Running</string>
+    
+    <!-- Shizuku Guide -->
+    <string name="shizuku_title">SHIZUKU INTEGRATION</string>
+    <string name="shizuku_desc">Enable privileged access for automation features</string>
+    <string name="shizuku_step1">▸ Download &amp; Install Shizuku Manager</string>
+    <string name="shizuku_step2">▸ Enable Wireless Debugging in Developer Options</string>
+    <string name="shizuku_step3">▸ Pair &amp; Start Shizuku Service</string>
+    <string name="btn_download_shizuku">DOWNLOAD SHIZUKU</string>
+    
+    <!-- Authentication -->
+    <string name="auth_title">SECURE AUTHENTICATION</string>
+    <string name="auth_desc">Enter your authentication key to access premium features</string>
+    <string name="et_hint">Authentication Key</string>
+    <string name="btn_validate">VALIDATE &amp; CONTINUE</string>
+    
+    <!-- Automation -->
+    <string name="auto_title">AUTOMATION ENGINE</string>
+    <string name="timer_label">SESSION TIMER</string>
+    <string name="btn_start">🚀 START SERVICE</string>
+    <string name="btn_stop">⏹️ STOP SERVICE</string>
+    <string name="btn_logout">LOGOUT</string>
+    
+    <!-- Toast Messages -->
+    <string name="toast_enter_token">Please enter your authentication key</string>
+    <string name="toast_auth_success">Authentication Successful!</string>
+    <string name="toast_auth_failed">Authentication Failed</string>
+    <string name="toast_config_created">Config Created Successfully!</string>
+    <string name="toast_config_deleted">Config Deleted!</string>
+    <string name="toast_started">Server Started Successfully</string>
+    <string name="toast_stopped">Server Stopped Successfully</string>
+    <string name="toast_error">Error: </string>
+    
+    <!-- Error Messages -->
+    <string name="error_no_game">Execution Failed: Target game configuration parameters not found.</string>
+    <string name="error_network">Network Connection Failure</string>
+    <string name="error_server">Server Connection Failure</string>
+    <string name="error_config">Configuration file not found</string>
+    
+    <!-- Game Selection -->
+    <string name="dialog_title">Select Target Environment</string>
+    <string name="game_standard">Free Fire Standard</string>
+    <string name="game_max">Free Fire MAX</string>
+</resources>
