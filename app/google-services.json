@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "825024469978",
-    "project_id": "access-login-413f8",
-    "storage_bucket": "access-login-413f8.firebasestorage.app"
+    "project_number": "865716698918",
+    "project_id": "lunaardatabase",
+    "storage_bucket": "lunaardatabase.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:825024469978:android:05348e0558ccb05bbe3ee3",
+        "mobilesdk_app_id": "1:865716698918:web:60cb010e874333c69e8be7",
         "android_client_info": {
-          "package_name": "online.akiru.accesslogin.app"
+          "package_name": "online.luna.proxy.app"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDZuLACWusHvu5h7AOOzui7xzbNDozqsvI"
+          "current_key": "AIzaSyDByLxMH9mz7eajUIU0QxgXwLnsx1KR8lE"
         }
       ],
       "services": {
