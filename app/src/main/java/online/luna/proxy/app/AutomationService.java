@@ -27,6 +27,11 @@ public class AutomationService extends Service {
     private long startTime = 0L;
     private String runtimeMode = "SHIZUKU";
     private String targetFilePath = "";
+    
+    // Timer duration in milliseconds (default 1 hour = 3600000ms)
+    // Change this as per your requirement
+    private static final long TIMER_DURATION = 3600000; // 1 hour
+    // private static final long TIMER_DURATION = 60000; // 1 minute for testing
 
     private final Runnable timerRunnable = new Runnable() {
         @Override
@@ -34,6 +39,14 @@ public class AutomationService extends Service {
             if (!isRunning) return;
             
             long millis = System.currentTimeMillis() - startTime;
+            
+            // CHECK IF TIMER IS COMPLETED
+            if (millis >= TIMER_DURATION) {
+                // Timer complete - auto stop service
+                stopSelf();
+                return;
+            }
+            
             int seconds = (int) (millis / 1000);
             int minutes = seconds / 60;
             int hours = minutes / 60;
@@ -71,9 +84,7 @@ public class AutomationService extends Service {
             targetFilePath = intent.getStringExtra("target_path") != null ? intent.getStringExtra("target_path") : "";
         }
         
-        // Direct start - no config reading, no crash!
         startSuccess();
-        
         return START_STICKY;
     }
 
@@ -98,11 +109,12 @@ public class AutomationService extends Service {
         });
     }
 
-    private void deleteFile() {
+    private void deleteConfigFile() {
         if (targetFilePath == null || targetFilePath.isEmpty()) return;
         
         if ("DIRECT".equals(runtimeMode)) {
-            new File(targetFilePath).delete();
+            File file = new File(targetFilePath);
+            if (file.exists()) file.delete();
         } else {
             try {
                 Process process;
@@ -168,8 +180,12 @@ public class AutomationService extends Service {
             stopIntent.setPackage("online.luna.proxy.app");
             sendBroadcast(stopIntent);
             
-            new Thread(this::deleteFile).start();
-            Toast.makeText(getApplicationContext(), "Stopped", Toast.LENGTH_SHORT).show();
+            // FILE DELETE HOGI JAB SERVICE STOP HOGA
+            Thread cleanupThread = new Thread(this::deleteConfigFile);
+            cleanupThread.start();
+            try { cleanupThread.join(); } catch (InterruptedException e) {}
+            
+            Toast.makeText(getApplicationContext(), "Service Stopped & Config Deleted", Toast.LENGTH_LONG).show();
         }
         super.onDestroy();
     }
