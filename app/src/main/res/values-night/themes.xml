@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Night mode — same Lunar dark, explicitly declared -->
+    <style name="Theme.LunarProxy" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#FFD700</item>
+        <item name="colorPrimaryVariant">#FF8C00</item>
+        <item name="colorOnPrimary">#06060D</item>
+        <item name="colorSecondary">#22FF88</item>
+        <item name="colorSecondaryVariant">#00C853</item>
+        <item name="colorOnSecondary">#06060D</item>
+
+        <!-- Night background — exactly same dark, no accidental light flash -->
+        <item name="android:windowBackground">#06060D</item>
+        <item name="colorSurface">#0D0D1A</item>
+        <item name="colorOnSurface">#FFD700</item>
+        <item name="colorBackground">#06060D</item>
+        <item name="colorOnBackground">#FFD700</item>
+
+        <!-- Status + nav dark in night mode -->
+        <item name="android:statusBarColor">#06060D</item>
+        <item name="android:navigationBarColor">#06060D</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- No action bar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Ripple / control gold -->
+        <item name="colorControlHighlight">#22FFD700</item>
+        <item name="rippleColor">#33FFD700</item>
+        <item name="colorControlActivated">#FFD700</item>
+        <item name="android:colorControlActivated">#FFD700</item>
+        <item name="android:textColorHighlight">#33FFD700</item>
+
+        <!-- Card dark surface in night -->
+        <item name="cardBackgroundColor">#0D0D1A</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">16dp</item>
+
+    </style>
+
+    <style name="Theme.LunarProxy.Splash" parent="Theme.LunarProxy">
+        <item name="android:windowBackground">#06060D</item>
+        <item name="android:statusBarColor">#06060D</item>
+        <item name="android:navigationBarColor">#06060D</item>
+    </style>
+
+</resources>

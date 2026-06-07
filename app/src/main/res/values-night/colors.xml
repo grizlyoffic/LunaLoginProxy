@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night mode — same as base, prevents system from overriding -->
+    <color name="lunar_bg">#06060D</color>
+    <color name="lunar_bg_card">#0D0D1A</color>
+    <color name="lunar_bg_card_glass">#0A0A14</color>
+    <color name="lunar_bg_timer">#071410</color>
+    <color name="lunar_gold">#FFD700</color>
+    <color name="lunar_gold_dark">#FF8C00</color>
+    <color name="lunar_green">#22FF88</color>
+    <color name="lunar_green_dark">#00C853</color>
+    <color name="lunar_text_primary">#FFD700</color>
+    <color name="lunar_text_secondary">#88B0C4DE</color>
+    <color name="lunar_status_bar">#06060D</color>
+    <color name="lunar_nav_bar">#06060D</color>
+</resources>
