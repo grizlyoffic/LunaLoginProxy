@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <bool name="enable_animations">true</bool>
-    <bool name="enable_haptic_feedback">true</bool>
-    <bool name="enable_logging">false</bool>
-</resources>
