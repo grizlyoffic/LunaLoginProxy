@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Android 12+ overrides — disable dynamic color, keep Lunar dark -->
+    <style name="Theme.LunarProxy" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Force our gold, not system dynamic color -->
+        <item name="colorPrimary">#FFD700</item>
+        <item name="colorPrimaryVariant">#FF8C00</item>
+        <item name="colorOnPrimary">#06060D</item>
+        <item name="colorSecondary">#22FF88</item>
+        <item name="colorSecondaryVariant">#00C853</item>
+        <item name="colorOnSecondary">#06060D</item>
+
+        <!-- Background stays pure dark — no Material You tinting -->
+        <item name="android:windowBackground">#06060D</item>
+        <item name="colorSurface">#0D0D1A</item>
+        <item name="colorOnSurface">#FFD700</item>
+        <item name="colorBackground">#06060D</item>
+        <item name="colorOnBackground">#FFD700</item>
+
+        <!-- Android 12 — status bar + nav bar dark with light icons OFF -->
+        <item name="android:statusBarColor">#06060D</item>
+        <item name="android:navigationBarColor">#06060D</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Android 12 nav bar divider — remove white line -->
+        <item name="android:navigationBarDividerColor">#06060D</item>
+
+        <!-- Edge-to-edge (Android 12 default) — match bg so no flash -->
+        <item name="android:enforceStatusBarContrast">false</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+
+        <!-- No action bar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Ripple / control -->
+        <item name="colorControlHighlight">#22FFD700</item>
+        <item name="rippleColor">#33FFD700</item>
+        <item name="colorControlActivated">#FFD700</item>
+        <item name="android:colorControlActivated">#FFD700</item>
+        <item name="android:textColorHighlight">#33FFD700</item>
+
+    </style>
+
+    <style name="Theme.LunarProxy.Splash" parent="Theme.LunarProxy">
+        <item name="android:windowBackground">#06060D</item>
+        <item name="android:statusBarColor">#06060D</item>
+        <item name="android:navigationBarColor">#06060D</item>
+    </style>
+
+</resources>
