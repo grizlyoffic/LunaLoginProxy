@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ── LUNAR PROXY BRAND COLORS ── -->
+    <color name="lunar_bg">#06060D</color>
+    <color name="lunar_bg_card">#0D0D1A</color>
+    <color name="lunar_bg_card_glass">#0A0A14</color>
+    <color name="lunar_bg_timer">#071410</color>
+
+    <!-- Gold palette -->
+    <color name="lunar_gold">#FFD700</color>
+    <color name="lunar_gold_dark">#FF8C00</color>
+    <color name="lunar_gold_deep">#FF4500</color>
+    <color name="lunar_gold_dim">#99FFD700</color>
+    <color name="lunar_gold_faint">#33FFD700</color>
+    <color name="lunar_gold_ghost">#0DFFD700</color>
+    <color name="lunar_gold_border">#33FFB400</color>
+
+    <!-- Green palette -->
+    <color name="lunar_green">#22FF88</color>
+    <color name="lunar_green_dark">#00C853</color>
+    <color name="lunar_green_dim">#6EE7B7</color>
+    <color name="lunar_green_faint">#2222FF88</color>
+
+    <!-- Accent palette -->
+    <color name="lunar_cyan">#A5F3FC</color>
+    <color name="lunar_cyan_faint">#33A5F3FC</color>
+    <color name="lunar_purple">#C4B5FD</color>
+    <color name="lunar_blue">#60B4FF</color>
+    <color name="lunar_blue_dark">#3B82F6</color>
+
+    <!-- Red palette -->
+    <color name="lunar_red">#FF4500</color>
+    <color name="lunar_red_dark">#B71C1C</color>
+    <color name="lunar_red_text">#FF6060</color>
+
+    <!-- Text colors -->
+    <color name="lunar_text_primary">#FFD700</color>
+    <color name="lunar_text_secondary">#88B0C4DE</color>
+    <color name="lunar_text_hint">#44FFD700</color>
+    <color name="lunar_text_dim">#55FFD700</color>
+    <color name="lunar_text_footer">#33FFD700</color>
+
+    <!-- Status bar / nav -->
+    <color name="lunar_status_bar">#06060D</color>
+    <color name="lunar_nav_bar">#06060D</color>
+
+    <!-- White alphas -->
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="white_50">#88FFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+
+</resources>
