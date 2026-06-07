@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ╔══════════════════════════════════════════════════╗
+  ║   LUNAR PROXY · ELITE ACCESS SYSTEM              ║
+  ║   Renovated XML — HTML-match UI                  ║
+  ║   All original IDs preserved                     ║
+  ╚══════════════════════════════════════════════════╝
+
+  DRAWABLE FILES NEEDED  (create these in res/drawable/):
+  ──────────────────────────────────────────────────────
+  bg_dark.xml            → solid #06060D
+  card_dark.xml          → shape with stroke #33FFB400, cornerRadius 20dp, fill #0D0D1A
+  card_glass.xml         → shape with stroke #22FFB400, cornerRadius 20dp, fill #0A0A14
+  card_green.xml         → shape with stroke #2222FF88, cornerRadius 20dp, fill #071410
+  btn_gold.xml           → gradient #FF8C00 → #FFD700, cornerRadius 10dp
+  btn_red.xml            → gradient #FF4500 → #B71C1C, cornerRadius 10dp
+  btn_green.xml          → gradient #00C853 → #22FF88, cornerRadius 10dp
+  btn_ghost.xml          → shape stroke #33FFD700, fill #0DFFD700, cornerRadius 10dp
+  btn_shizuku.xml        → shape stroke #33A5F3FC, fill #0DA5F3FC, cornerRadius 10dp
+  edittext_border.xml    → shape stroke #33FFD700, fill #08FFD700, cornerRadius 10dp
+  dot_gold.xml           → oval, fill #FFD700, size 8dp
+  dot_green.xml          → oval, fill #22FF88, size 8dp
+  dot_cyan.xml           → oval, fill #A5F3FC, size 8dp
+  divider_gradient.xml   → gradient #00000000 → #FFD700 → #00000000
+-->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#06060D"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- ══ LOGOUT — top-right, red ghost style ══ -->
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="LOGOUT"
+            android:textSize="10sp"
+            android:textColor="#FF6060"
+            android:letterSpacing="0.15"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/btn_red"
+            android:stateListAnimator="@null"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:elevation="4dp" />
+
+        <!-- ══ MAIN COLUMN ══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/btn_logout"
+            android:layout_marginTop="20dp">
+
+            <!-- ────────────────────────────────────────────────
+                 HEADER CARD  (Lunar Proxy logo + status)
+                 matches HTML: moon emoji + title + subtitle + status
+            ──────────────────────────────────────────────────── -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                app:cardCornerRadius="24dp"
+                app:cardBackgroundColor="#0D0D1A"
+                app:cardElevation="24dp">
+
+                <!-- Gold border overlay -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_dark">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="40dp"
+                        android:paddingBottom="32dp"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp">
+
+                        <!-- Moon emoji — same as HTML -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🌙"
+                            android:textSize="64sp"
+                            android:layout_marginBottom="4dp" />
+
+                        <!-- Orbit star row (static) -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="· · ⭐ · ·"
+                            android:textSize="14sp"
+                            android:textColor="#66FFD700"
+                            android:letterSpacing="0.3"
+                            android:layout_marginBottom="16dp" />
+
+                        <!-- LUNAR PROXY title — Orbitron style bold gold -->
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚡ ACCESS LOGIN"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="#FFD700"
+                            android:letterSpacing="0.25"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:layout_marginBottom="6dp" />
+
+                        <!-- Subtitle — like HTML ELITE ACCESS SYSTEM -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ELITE ACCESS SYSTEM"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#99FFD700"
+                            android:letterSpacing="0.35"
+                            android:textAlignment="center"
+                            android:layout_marginBottom="18dp" />
+
+                        <!-- Gold divider — like HTML gradient_divider -->
+                        <View
+                            android:layout_width="60dp"
+                            android:layout_height="2dp"
+                            android:background="@drawable/divider_gradient"
+                            android:layout_marginBottom="18dp" />
+
+                        <!-- Dot row — like HTML .dot-row -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="18dp">
+
+                            <View android:layout_width="8dp" android:layout_height="8dp"
+                                android:background="@drawable/dot_gold"
+                                android:layout_marginEnd="8dp" android:alpha="0.4"/>
+                            <View android:layout_width="8dp" android:layout_height="8dp"
+                                android:background="@drawable/dot_gold"
+                                android:layout_marginEnd="8dp" android:alpha="0.6"/>
+                            <View android:layout_width="10dp" android:layout_height="10dp"
+                                android:background="@drawable/dot_gold"
+                                android:layout_marginEnd="8dp"/>
+                            <View android:layout_width="8dp" android:layout_height="8dp"
+                                android:background="@drawable/dot_gold"
+                                android:layout_marginEnd="8dp" android:alpha="0.6"/>
+                            <View android:layout_width="8dp" android:layout_height="8dp"
+                                android:background="@drawable/dot_gold" android:alpha="0.4"/>
+
+                        </LinearLayout>
+
+                        <!-- Status text — like HTML tvStatus -->
+                        <TextView
+                            android:id="@+id/tv_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Initializing secure environment..."
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#88B0C4DE"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:lineSpacingMultiplier="1.6" />
+
+                    </LinearLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ────────────────────────────────────────────────
+                 SHIZUKU GUIDE CARD
+                 matches HTML: s-shizuko modal style
+            ──────────────────────────────────────────────────── -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardBackgroundColor="#0D0D1A"
+                app:cardElevation="16dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_shizuku_guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:background="@drawable/card_dark"
+                    android:visibility="gone">
+
+                    <!-- Header row — cyan dot + label -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="6dp">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/dot_cyan"
+                            android:layout_marginEnd="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SHIZUKU INTEGRATION"
+                            android:textSize="10sp"
+                            android:textColor="#A5F3FC"
+                            android:letterSpacing="0.3"
+                            android:fontFamily="sans-serif-medium" />
+
+                    </LinearLayout>
+
+                    <!-- Shield icon — like HTML shizuko-icon -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🛡️"
+                        android:textSize="48sp"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <!-- Title -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SHIZUKU ACTIVE?"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="#FFD700"
+                        android:letterSpacing="0.2"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Desc -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Privileged access ke liye Shizuku required hai.\nEnable karein phir continue karein."
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#88B0C4DE"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="1.6"
+                        android:layout_marginBottom="20dp" />
+
+                    <!-- Steps box — like HTML warn-tag style -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/card_glass"
+                        android:padding="16dp"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="▸  Download &amp; Install Shizuku"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#CCFFFFFF"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="▸  Enable Wireless Debugging in Dev Options"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#CCFFFFFF"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="▸  Pair &amp; Start Shizuku Service"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#CCFFFFFF" />
+
+                    </LinearLayout>
+
+                    <!-- Download Shizuku button — cyan ghost style -->
+                    <Button
+                        android:id="@+id/btn_download_shizuku"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:text="DOWNLOAD SHIZUKU"
+                        android:textSize="12sp"
+                        android:textColor="#A5F3FC"
+                        android:letterSpacing="0.15"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/btn_shizuku"
+                        android:stateListAnimator="@null"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="4dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ────────────────────────────────────────────────
+                 AUTH / TOKEN CARD
+                 matches HTML: s-token modal — key icon, input, verify
+            ──────────────────────────────────────────────────── -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardBackgroundColor="#0D0D1A"
+                app:cardElevation="16dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_auth_gateway"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:background="@drawable/card_dark"
+                    android:visibility="gone">
+
+                    <!-- Header row — purple dot + label -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="6dp">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/dot_gold"
+                            android:layout_marginEnd="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SECURE AUTHENTICATION"
+                            android:textSize="10sp"
+                            android:textColor="#C4B5FD"
+                            android:letterSpacing="0.3"
+                            android:fontFamily="sans-serif-medium" />
+
+                    </LinearLayout>
+
+                    <!-- Key icon -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🔑"
+                        android:textSize="44sp"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Title -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TOKEN VERIFY"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="#FFD700"
+                        android:letterSpacing="0.2"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Hint label — like HTML token-hint -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ACCESS TOKEN"
+                        android:textSize="10sp"
+                        android:textColor="#55FFD700"
+                        android:letterSpacing="0.3"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Desc -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Apna authentication key enter karein"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#88B0C4DE"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_marginBottom="20dp" />
+
+                    <!-- Token input — gold bordered, monospace style -->
+                    <EditText
+                        android:id="@+id/et_token"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:hint="• • • • • • • • • •"
+                        android:textColorHint="#44FFD700"
+                        android:textColor="#FFD700"
+                        android:textSize="16sp"
+                        android:fontFamily="monospace"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:gravity="center"
+                        android:paddingStart="22dp"
+                        android:paddingEnd="22dp"
+                        android:background="@drawable/edittext_border"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- VERIFY button — gold gradient like HTML verify-btn -->
+                    <Button
+                        android:id="@+id/btn_sync"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="⟡   VERIFY"
+                        android:textSize="13sp"
+                        android:textColor="#06060D"
+                        android:letterSpacing="0.2"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/btn_gold"
+                        android:stateListAnimator="@null"
+                        android:elevation="6dp" />
+
+                    <!-- Bottom verify tag — like HTML verify-tag -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="— LUNAR PROXY SECURE ACCESS —"
+                        android:textSize="9sp"
+                        android:textColor="#33FFD700"
+                        android:letterSpacing="0.3"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_marginTop="14dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ────────────────────────────────────────────────
+                 DASHBOARD / AUTOMATION CARD
+                 matches HTML: timer card + start/stop + slider rows
+            ──────────────────────────────────────────────────── -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardBackgroundColor="#0D0D1A"
+                app:cardElevation="16dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_automation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:background="@drawable/card_dark"
+                    android:visibility="gone">
+
+                    <!-- Header row — green dot + AUTOMATION ENGINE -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="6dp">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/dot_green"
+                            android:layout_marginEnd="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AUTOMATION ENGINE"
+                            android:textSize="10sp"
+                            android:textColor="#6EE7B7"
+                            android:letterSpacing="0.3"
+                            android:fontFamily="sans-serif-medium" />
+
+                        <!-- Online status badge — right aligned -->
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="6dp"
+                            android:background="@drawable/dot_green"
+                            android:layout_marginEnd="6dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ONLINE"
+                            android:textSize="9sp"
+                            android:textColor="#44FF88"
+                            android:letterSpacing="0.2"
+                            android:fontFamily="sans-serif-medium" />
+
+                    </LinearLayout>
+
+                    <!-- ── TIMER CARD — matches HTML .timer-card ── -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="22dp"
+                        app:cardCornerRadius="18dp"
+                        app:cardBackgroundColor="#071410"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="28dp"
+                            android:background="@drawable/card_green">
+
+                            <!-- SESSION TIMER label -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="⏱  SESSION TIMER"
+                                android:textSize="9sp"
+                                android:textColor="#44FF88"
+                                android:letterSpacing="0.35"
+                                android:layout_marginBottom="14dp" />
+
+                            <!-- 00:00:00 display — large monospace -->
+                            <TextView
+                                android:id="@+id/tv_timer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00:00:00"
+                                android:textSize="44sp"
+                                android:fontFamily="monospace"
+                                android:textStyle="bold"
+                                android:textColor="#22FF88"
+                                android:letterSpacing="0.05"
+                                android:textAlignment="center"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- ── START button — green gradient ── -->
+                    <Button
+                        android:id="@+id/btn_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="▶  START SERVICE"
+                        android:textSize="13sp"
+                        android:textColor="#06060D"
+                        android:letterSpacing="0.15"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/btn_green"
+                        android:stateListAnimator="@null"
+                        android:layout_marginBottom="12dp"
+                        android:elevation="6dp" />
+
+                    <!-- ── STOP button — red gradient (hidden initially) ── -->
+                    <Button
+                        android:id="@+id/btn_stop"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:text="■  STOP SERVICE"
+                        android:textSize="13sp"
+                        android:textColor="#FFFFFF"
+                        android:letterSpacing="0.15"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/btn_red"
+                        android:stateListAnimator="@null"
+                        android:layout_marginBottom="12dp"
+                        android:elevation="6dp"
+                        android:visibility="gone" />
+
+                    <!-- ── RESET button — ghost gold style ── -->
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:text="↺  RESET"
+                        android:textSize="12sp"
+                        android:textColor="#88FFD700"
+                        android:letterSpacing="0.15"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/btn_ghost"
+                        android:stateListAnimator="@null"
+                        android:layout_marginBottom="24dp" />
+
+                    <!-- ── CONTROL PANEL label — matches HTML .sliders-title ── -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⚡  CONTROL PANEL"
+                        android:textSize="10sp"
+                        android:textColor="#88FFD700"
+                        android:letterSpacing="0.3"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#15FFD700"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- ── Slider 1 — Intensity (matches HTML fire slider) ── -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="18dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="🔥  Intensity"
+                                android:textSize="13sp"
+                                android:textColor="#CCE0C07A"
+                                android:fontFamily="sans-serif-light" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="75%"
+                                android:textSize="12sp"
+                                android:textColor="#FFD700"
+                                android:fontFamily="monospace" />
+
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:progress="75"
+                            android:max="100"
+                            android:progressTint="#FFD700"
+                            android:thumbTint="#FF8C00" />
+
+                    </LinearLayout>
+
+                    <!-- ── Slider 2 — Speed (matches HTML green slider) ── -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="18dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="🌊  Speed"
+                                android:textSize="13sp"
+                                android:textColor="#CCE0C07A"
+                                android:fontFamily="sans-serif-light" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="50%"
+                                android:textSize="12sp"
+                                android:textColor="#22FF88"
+                                android:fontFamily="monospace" />
+
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:progress="50"
+                            android:max="100"
+                            android:progressTint="#22FF88"
+                            android:thumbTint="#00CC66" />
+
+                    </LinearLayout>
+
+                    <!-- ── Slider 3 — Power (matches HTML blue slider) ── -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="💫  Power"
+                                android:textSize="13sp"
+                                android:textColor="#CCE0C07A"
+                                android:fontFamily="sans-serif-light" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="88%"
+                                android:textSize="12sp"
+                                android:textColor="#60B4FF"
+                                android:fontFamily="monospace" />
+
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:progress="88"
+                            android:max="100"
+                            android:progressTint="#60B4FF"
+                            android:thumbTint="#3B82F6" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ── Loading spinner — like HTML progressBar ── -->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:visibility="gone"
+                android:indeterminateTint="#FFD700"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp" />
+
+            <!-- ── Footer — like HTML © text ── -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="© 2024  LUNAR PROXY  ·  @lunarking  ·  ELITE SUITE"
+                android:textSize="9sp"
+                android:textColor="#33FFD700"
+                android:fontFamily="sans-serif-light"
+                android:letterSpacing="0.1"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
